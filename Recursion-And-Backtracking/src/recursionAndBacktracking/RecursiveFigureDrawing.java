@@ -1,3 +1,5 @@
+package recursionAndBacktracking;
+
 import java.util.Scanner;
 
 public class RecursiveFigureDrawing {

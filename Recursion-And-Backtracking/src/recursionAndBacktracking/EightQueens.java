@@ -1,3 +1,5 @@
+package recursionAndBacktracking;
+
 public class EightQueens {
 
     public static char[][] chessboard = {
