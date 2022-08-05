@@ -30,7 +30,8 @@ public class Combinations {
 
         for (int i = start; i < elements.length; i++) {
             slots[index] = elements[i];
-            combinations(index + 1, i + 1);
+            //if you want combinations without repetition --> combinations(index + 1, i + 1)
+            combinations(index + 1, i);
         }
 
     }
