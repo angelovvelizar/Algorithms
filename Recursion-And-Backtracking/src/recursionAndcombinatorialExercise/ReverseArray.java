@@ -9,25 +9,17 @@ public class ReverseArray {
 
         int[] array = Arrays.stream(sc.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
 
-        int[] reversedArray = new int[array.length];
 
-        reverseArray(array, reversedArray, 0);
+        reverseArray(array, array.length - 1);
     }
 
-    private static void reverseArray(int[] array, int[] reversedArray, int index) {
-        if(index >= array.length){
-            printReversedArray(reversedArray);
+    private static void reverseArray(int[] array, int index) {
+        if(index < 0){
             return;
         }
 
-        reversedArray[index] = array[array.length - 1 - index];
-
-        reverseArray(array, reversedArray, index + 1);
+        System.out.print(array[index] + " ");
+        reverseArray(array, index - 1);
     }
 
-    private static void printReversedArray(int[] reversedArray) {
-        for (int number : reversedArray) {
-            System.out.print(number + " ");
-        }
-    }
 }
